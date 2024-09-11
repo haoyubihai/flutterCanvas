@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_canvas/buttonscale/button_scale.dart';
 import 'package:flutter_canvas/circle_progress/circle_progress.dart';
+import 'package:flutter_canvas/circlerotate/circle_rotate.dart';
+import 'package:flutter_canvas/text/custom_text.dart';
 
 void main() {
   runApp(const MyApp());
@@ -94,7 +97,32 @@ class _MyHomePageState extends State<MyHomePage> {
                     return const CircleProgress();
                   }));
                 },
-                child: const Text("CircleProgress"))
+                child: const Text("CircleProgress")),
+
+                     TextButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (c) {
+                    return const CustomTextPage();
+                  }));
+                },
+                child: const Text("customText")),
+                          TextButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (c) {
+                    return const ButtonScale();
+                  }));
+                },
+                child: const Text("buttonScale")),
+
+                   TextButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (c) {
+                    return const CircleRotate();
+                  }));
+                },
+                child: const Text("circle")),
+
+
           ],
         ),
       ),
