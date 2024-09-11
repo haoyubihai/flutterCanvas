@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_canvas/buttonscale/button_scale.dart';
 import 'package:flutter_canvas/circle_progress/circle_progress.dart';
 import 'package:flutter_canvas/circlerotate/circle_rotate.dart';
+import 'package:flutter_canvas/dash_line/dash_line.dart';
 import 'package:flutter_canvas/text/custom_text.dart';
 
 void main() {
@@ -121,6 +122,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   }));
                 },
                 child: const Text("circle")),
+
+
+                   TextButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (c) {
+                    return const DashLine();
+                  }));
+                },
+                child: const Text("dashline")),
 
 
           ],
